@@ -8,13 +8,13 @@
       "type": "wokwi-pushbutton",
       "id": "btn1",
       "top": 150.2,
-      "left": -48,
+      "left": -57.6,
       "attrs": { "color": "green" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r1",
-      "top": 157.55,
+      "top": 176.75,
       "left": 28.8,
       "attrs": { "value": "4700" }
     },
@@ -31,13 +31,13 @@
   "connections": [
     [ "esp:TX", "$serialMonitor:RX", "", [] ],
     [ "esp:RX", "$serialMonitor:TX", "", [] ],
-    [ "btn1:2.r", "esp:5V", "red", [ "h0" ] ],
-    [ "btn1:1.r", "r1:1", "black", [ "v0" ] ],
     [ "r1:2", "esp:CMD", "black", [ "v0" ] ],
-    [ "esp:35", "btn1:1.r", "green", [ "h0" ] ],
     [ "led1:C", "esp:GND.2", "black", [ "v0" ] ],
     [ "r2:1", "led1:A", "red", [ "h0" ] ],
-    [ "r2:2", "esp:19", "red", [ "h0", "v8.4" ] ]
+    [ "r2:2", "esp:19", "red", [ "h0", "v8.4" ] ],
+    [ "btn1:2.r", "r1:1", "black", [ "h0" ] ],
+    [ "btn1:1.r", "esp:3V3", "red", [ "v0" ] ],
+    [ "r1:1", "esp:13", "green", [ "v0" ] ]
   ],
   "dependencies": {}
 }
